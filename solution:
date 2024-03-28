@@ -1,0 +1,7 @@
+If you get ReferenceError: require is not defined in ES module scope, you can use import instead
+then what fixed it for me was too add the code:
+
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
+After implementing this you can use: const x = require('')
