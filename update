@@ -1,0 +1,11 @@
+I guess looking at it now placing "type": "module", inside package.json is likely
+the cause of this error. I havent found any problems with it however but I was reading 
+over the error:
+
+ReferenceError: require is not defined in ES module scope, you can use import instead
+This file is being treated as an ES module because it has a
+'.js' file extension and '/Users/jakecoble/Desktop/BaseForGPT/package.json' 
+contains "type": "module". To treat it as a CommonJS script, rename it to use the 
+'.cjs' file extension.
+
+and its kind of self explanatory on how type: module caused this error with require().
